@@ -27,12 +27,13 @@ class Boot {
 
     // Build SiteMap
     val entries = List(
-      Menu.i("Home") / "index", // the simple way to declare a menu
+      Menu.i("首页") / "index", // the simple way to declare a menu
 
       // more complex because this menu allows anything in the
       // /static path to be visible
       Menu(Loc("Static", Link(List("static"), true, "/static/index"), 
-	       "Login")))
+	       "登录")))
+	  Menu(Loc("Static",Link(List("static"),true,"/static/user"),"用户管理"))
 
     // set the sitemap.  Note if you don't want access control for
     // each page, just comment this line out.
